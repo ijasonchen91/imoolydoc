@@ -1,0 +1,6 @@
+
+svn log moolly -r {2014-7-25}:{2014-8-1} -v --xml --non-interactive > moolly.log
+
+
+
+java -classpath SvnStat-all.jar de.agentlab.svnstat.SvnStat -jar SvnStat-all.jar -r /root/svn/moolly.log -d /var/www/html/moolly

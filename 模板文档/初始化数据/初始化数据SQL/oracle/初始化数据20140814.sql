@@ -1,0 +1,749 @@
+prompt PL/SQL Developer import file
+prompt Created on 2014年8月14日 by Administrator
+set feedback off
+set define off
+prompt Deleting MB_USER_ROLE_RELATION...
+delete from MB_USER_ROLE_RELATION;
+commit;
+prompt Deleting MB_USER_ROLE_PRIVILEGE...
+delete from MB_USER_ROLE_PRIVILEGE;
+commit;
+prompt Deleting MB_USER_ROLE...
+delete from MB_USER_ROLE;
+commit;
+prompt Deleting MB_USER_PRIVILEGE...
+delete from MB_USER_PRIVILEGE;
+commit;
+prompt Deleting MB_PAY_PARAMER...
+delete from MB_PAY_PARAMER;
+commit;
+prompt Deleting MB_BUSINESS_ROLE_RELATION...
+delete from MB_BUSINESS_ROLE_RELATION;
+commit;
+prompt Deleting MB_BUSINESS_ROLE_PRIVILEGE...
+delete from MB_BUSINESS_ROLE_PRIVILEGE;
+commit;
+prompt Deleting MB_BUSINESS_ROLE...
+delete from MB_BUSINESS_ROLE;
+commit;
+prompt Deleting MB_BUSINESS_RELATION...
+delete from MB_BUSINESS_RELATION;
+commit;
+prompt Deleting MB_BUSINESS_PRIVILEGE...
+delete from MB_BUSINESS_PRIVILEGE;
+commit;
+prompt Deleting MB_BUSINESSER_ROLE_RELATION...
+delete from MB_BUSINESSER_ROLE_RELATION;
+commit;
+prompt Deleting MB_BUSINESSER_ROLE_PRIVILEGE...
+delete from MB_BUSINESSER_ROLE_PRIVILEGE;
+commit;
+prompt Deleting MB_BUSINESSER_ROLE...
+delete from MB_BUSINESSER_ROLE;
+commit;
+prompt Deleting MB_BUSINESSER_PRIVILEGE...
+delete from MB_BUSINESSER_PRIVILEGE;
+commit;
+prompt Deleting MB_BUSINESSER...
+delete from MB_BUSINESSER;
+commit;
+prompt Deleting MB_BUSINESS...
+delete from MB_BUSINESS;
+commit;
+prompt Deleting MB_PARAM_SUIT...
+delete from MB_PARAM_SUIT;
+commit;
+prompt Loading MB_PARAM_SUIT...
+insert into MB_PARAM_SUIT (ID, RESUME)
+values ('Ml00000001', '默认绑定会员消费提成0.001');
+commit;
+prompt 1 records loaded
+prompt Loading MB_BUSINESS...
+insert into MB_BUSINESS (ID, PID, SHORTNAME, NAME, INDATE, SUITID, RESUME, STATUS, TYPE, PROVINCEID, TOWNID, ADDRAREA, ADDRSTREET, POINTLNG, POINTLAT, PAYDATE, DISCOUNT, BILLTYPE)
+values ('B000001', '0', '系统', '系统(技术使用)', to_date('08-08-2014 15:59:00', 'dd-mm-yyyy hh24:mi:ss'), 'Ml00000001', '魔力系统', 1, 0, null, null, null, null, null, null, to_date('08-08-2014 15:59:00', 'dd-mm-yyyy hh24:mi:ss'), null, 1);
+insert into MB_BUSINESS (ID, PID, SHORTNAME, NAME, INDATE, SUITID, RESUME, STATUS, TYPE, PROVINCEID, TOWNID, ADDRAREA, ADDRSTREET, POINTLNG, POINTLAT, PAYDATE, DISCOUNT, BILLTYPE)
+values ('B000002', 'B000001', '招行', '招商银行(技术使用)', to_date('08-08-2014 15:59:00', 'dd-mm-yyyy hh24:mi:ss'), 'Ml00000001', '第三方系统', 1, 1, null, null, null, null, null, null, to_date('08-08-2014 15:59:00', 'dd-mm-yyyy hh24:mi:ss'), null, 1);
+insert into MB_BUSINESS (ID, PID, SHORTNAME, NAME, INDATE, SUITID, RESUME, STATUS, TYPE, PROVINCEID, TOWNID, ADDRAREA, ADDRSTREET, POINTLNG, POINTLAT, PAYDATE, DISCOUNT, BILLTYPE)
+values ('B000003', 'B000001', '金卡通', '金卡通(技术使用)', to_date('08-08-2014 15:59:00', 'dd-mm-yyyy hh24:mi:ss'), 'Ml00000001', '第三方系统', 1, 1, null, null, null, null, null, null, to_date('08-08-2014 15:59:00', 'dd-mm-yyyy hh24:mi:ss'), null, 1);
+insert into MB_BUSINESS (ID, PID, SHORTNAME, NAME, INDATE, SUITID, RESUME, STATUS, TYPE, PROVINCEID, TOWNID, ADDRAREA, ADDRSTREET, POINTLNG, POINTLAT, PAYDATE, DISCOUNT, BILLTYPE)
+values ('B000004', 'B000001', '支付宝', '支付宝(技术使用)', to_date('08-08-2014 15:59:00', 'dd-mm-yyyy hh24:mi:ss'), 'Ml00000001', '第三方系统', 1, 1, null, null, null, null, null, null, to_date('08-08-2014 15:59:00', 'dd-mm-yyyy hh24:mi:ss'), null, 1);
+insert into MB_BUSINESS (ID, PID, SHORTNAME, NAME, INDATE, SUITID, RESUME, STATUS, TYPE, PROVINCEID, TOWNID, ADDRAREA, ADDRSTREET, POINTLNG, POINTLAT, PAYDATE, DISCOUNT, BILLTYPE)
+values ('B000010', 'B000001', '魔力网', '魔力网', to_date('08-08-2014 15:59:00', 'dd-mm-yyyy hh24:mi:ss'), 'Ml00000001', '魔力总部', 1, 3, null, null, null, null, null, null, to_date('08-08-2014 15:59:00', 'dd-mm-yyyy hh24:mi:ss'), null, 1);
+insert into MB_BUSINESS (ID, PID, SHORTNAME, NAME, INDATE, SUITID, RESUME, STATUS, TYPE, PROVINCEID, TOWNID, ADDRAREA, ADDRSTREET, POINTLNG, POINTLAT, PAYDATE, DISCOUNT, BILLTYPE)
+values ('B000100', 'B000010', '魔力收入账户', '魔力收入账户(技术使用)', to_date('08-08-2014 15:59:00', 'dd-mm-yyyy hh24:mi:ss'), 'Ml00000001', '魔力收入账户', 1, -1, null, null, null, null, null, null, to_date('08-08-2014 15:59:00', 'dd-mm-yyyy hh24:mi:ss'), null, 1);
+insert into MB_BUSINESS (ID, PID, SHORTNAME, NAME, INDATE, SUITID, RESUME, STATUS, TYPE, PROVINCEID, TOWNID, ADDRAREA, ADDRSTREET, POINTLNG, POINTLAT, PAYDATE, DISCOUNT, BILLTYPE)
+values ('B000101', 'B000001', '商城托管账户', '商城托管账户(技术使用)', to_date('08-08-2014 15:59:00', 'dd-mm-yyyy hh24:mi:ss'), 'Ml00000001', '商城托管账户', 1, -11, null, null, null, null, null, null, to_date('08-08-2014 15:59:00', 'dd-mm-yyyy hh24:mi:ss'), null, 1);
+insert into MB_BUSINESS (ID, PID, SHORTNAME, NAME, INDATE, SUITID, RESUME, STATUS, TYPE, PROVINCEID, TOWNID, ADDRAREA, ADDRSTREET, POINTLNG, POINTLAT, PAYDATE, DISCOUNT, BILLTYPE)
+values ('B000102', 'B000010', '魔力网后台', '魔力网后台(技术使用)', to_date('08-08-2014 15:59:00', 'dd-mm-yyyy hh24:mi:ss'), 'Ml00000001', '魔力网后台', 1, 5, null, null, null, null, null, null, to_date('08-08-2014 15:59:00', 'dd-mm-yyyy hh24:mi:ss'), null, 1);
+insert into MB_BUSINESS (ID, PID, SHORTNAME, NAME, INDATE, SUITID, RESUME, STATUS, TYPE, PROVINCEID, TOWNID, ADDRAREA, ADDRSTREET, POINTLNG, POINTLAT, PAYDATE, DISCOUNT, BILLTYPE)
+values ('B001000', 'B000010', '联盟测试账户', '联盟测试账户', to_date('08-08-2014 15:59:00', 'dd-mm-yyyy hh24:mi:ss'), 'Ml00000001', '用于测试正式环境商家系统的联盟账户', 1, 4, null, null, null, null, null, null, to_date('08-08-2014 15:59:00', 'dd-mm-yyyy hh24:mi:ss'), null, 1);
+insert into MB_BUSINESS (ID, PID, SHORTNAME, NAME, INDATE, SUITID, RESUME, STATUS, TYPE, PROVINCEID, TOWNID, ADDRAREA, ADDRSTREET, POINTLNG, POINTLAT, PAYDATE, DISCOUNT, BILLTYPE)
+values ('B001001', 'B000010', '商城测试账户', '商城测试账户', to_date('08-08-2014 15:59:00', 'dd-mm-yyyy hh24:mi:ss'), 'Ml00000001', '用于测试正式环境商家系统的商城账户', 1, 4, null, null, null, null, null, null, to_date('08-08-2014 15:59:00', 'dd-mm-yyyy hh24:mi:ss'), null, 1);
+insert into MB_BUSINESS (ID, PID, SHORTNAME, NAME, INDATE, SUITID, RESUME, STATUS, TYPE, PROVINCEID, TOWNID, ADDRAREA, ADDRSTREET, POINTLNG, POINTLAT, PAYDATE, DISCOUNT, BILLTYPE)
+values ('B001002', 'B000010', '联盟商城测试账户', '联盟商城测试账户', to_date('08-08-2014 15:59:00', 'dd-mm-yyyy hh24:mi:ss'), 'Ml00000001', '用于测试正式环境商家系统的联盟商城账户', 1, 4, null, null, null, null, null, null, to_date('08-08-2014 15:59:00', 'dd-mm-yyyy hh24:mi:ss'), null, 1);
+commit;
+prompt 11 records loaded
+prompt Loading MB_BUSINESSER...
+insert into MB_BUSINESSER (ID, ACCOUNT, PASSWORD, BUSINESSID, POST, NAME, STATUS, TYPE, DEL, LASTLOGINDATE)
+values ('BR000001', 'union01', 'e10adc3949ba59abbe56e057f20f883e', 'B001000', '店主', 'union01', 0, 1, 0, null);
+insert into MB_BUSINESSER (ID, ACCOUNT, PASSWORD, BUSINESSID, POST, NAME, STATUS, TYPE, DEL, LASTLOGINDATE)
+values ('BR000002', 'union02', 'e10adc3949ba59abbe56e057f20f883e', 'B001000', '店员', 'union02', 0, 1, 0, null);
+insert into MB_BUSINESSER (ID, ACCOUNT, PASSWORD, BUSINESSID, POST, NAME, STATUS, TYPE, DEL, LASTLOGINDATE)
+values ('BR000003', 'union03', 'e10adc3949ba59abbe56e057f20f883e', 'B001000', '店员', 'union03', 0, 1, 0, null);
+insert into MB_BUSINESSER (ID, ACCOUNT, PASSWORD, BUSINESSID, POST, NAME, STATUS, TYPE, DEL, LASTLOGINDATE)
+values ('BR000100', 'mall01', 'e10adc3949ba59abbe56e057f20f883e', 'B001001', '店主', 'mall01', 0, 1, 0, null);
+insert into MB_BUSINESSER (ID, ACCOUNT, PASSWORD, BUSINESSID, POST, NAME, STATUS, TYPE, DEL, LASTLOGINDATE)
+values ('BR000101', 'mall02', 'e10adc3949ba59abbe56e057f20f883e', 'B001001', '店主', 'mall02', 0, 1, 0, null);
+insert into MB_BUSINESSER (ID, ACCOUNT, PASSWORD, BUSINESSID, POST, NAME, STATUS, TYPE, DEL, LASTLOGINDATE)
+values ('BR100000', 'all01', 'e10adc3949ba59abbe56e057f20f883e', 'B001002', '店主', 'all01', 0, 1, 0, null);
+insert into MB_BUSINESSER (ID, ACCOUNT, PASSWORD, BUSINESSID, POST, NAME, STATUS, TYPE, DEL, LASTLOGINDATE)
+values ('BR100001', 'all02', 'e10adc3949ba59abbe56e057f20f883e', 'B001002', '店主', 'all01', 0, 1, 0, null);
+insert into MB_BUSINESSER (ID, ACCOUNT, PASSWORD, BUSINESSID, POST, NAME, STATUS, TYPE, DEL, LASTLOGINDATE)
+values ('4DAC7527-4A6F-1DB9-A6D9-B6E26F872D86', 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'B000102', '超级管理员', '超级管理员', 0, -1, 0, to_date('14-08-2014 22:37:55', 'dd-mm-yyyy hh24:mi:ss'));
+commit;
+prompt 8 records loaded
+prompt Loading MB_BUSINESSER_PRIVILEGE...
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|BC|AA|001', '基本信息修改');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|BC|AB|001', '用户管理（添加账号）');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|BC|AB|002', '用户管理（删除账号）');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|BC|AB|003', '用户管理（启用、停用账号）');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|BC|AB|004', '用户管理（修改账号密码）');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|BC|AB|005', '用户管理（查看角色权限）');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|BC|AB|006', '用户管理（修改角色权限）');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|BC|AB|007', '用户管理（添加角色）');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|BC|AB|008', '用户管理（删除角色）');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|BC|AC|001', '安全中心（手机、邮箱、密码修改）');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|BC|AD|001', '公告');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|BC|AE|001', '操作日志');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|BC|AF|001', '提现');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|BC|AG|001', '流水');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|BC|AH|001', '绑定会员');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|BC|AI|001', '评价查看');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|BM|AA|001', '绑定分润账单');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|OM|AC|001', '商城订单管理');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|SB|AA|001', '常规商品管理');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|SB|AA|002', '商品上架');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|SB|AA|003', '商品上架');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|SB|AC|001', '商品添加');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|SD|AA|001', '联盟商家展示');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|SM|AA|003', '下属商家（添加）');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|SM|AA|004', '下属商家（锁定、解锁）');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|VP|AA|001', '录入会员');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|VP|AB|001', '验证会员');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|VP|AC|001', '会员记录');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('B|VP|AD|001', '充值记录');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR001', '修改密码');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR002 ', '个人信息');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR003', '待办事项');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR004', '快捷操作');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR100', '添加修改商家分类');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR101', '查看商家分类列表');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR102', '删除商家分类');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR103', '添加修改商家信息');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR104', '查看商家信息');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR105', '修改商家基本信息');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR106', '修改商家上级关系');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR107', '更改商家分类');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR108', '修改商家状态');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR109', '删除商家');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR110', '添加修改商家联系人');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR111', '查看联系人');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR112', '删除联系人');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR113', '查看商家列表');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR114', '商家银行卡查看');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR115', '商家银行卡修改删除');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR116', '添加修改删除商家账号');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR117', '查看商家账号');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR118', '查看发货地址');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR119', '添加修改删除发货地址');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR120', '银行卡审核');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR121', '支付方式审核');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR122', '添加删除商家角色');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR123', '查看商家钱包流水');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR124', '商家评价管理');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR125', '商家审核');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR126', '商家提现');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR127 ', '商家邮费管理');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR201', '用户管理');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR202', '新增用户');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR203', '查看用户详情');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR204', '修改用户信息');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR211', '操作日志');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR220', '发短信');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR221', '发邮件');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR222', '发站内信');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR223', '魔力会员管理');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR301', '商品分类查询');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR302', '商品分类操作');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR307', '规格查询');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR308', '规格添加修改');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR309', '规格删除');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR310', '商品评价管理');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR320', '商品订单查询');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR321', '商品订单详细');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR330', '退换货查询');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR331', '退换货审核');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR340', '商品查询');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR341', '商品详细信息');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR342', '商品修改信息');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR343', '商品编辑价格');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR344', '商品审核');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR345', '商品上下架');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR346', '商品删除');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR347', '商品添加');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR350', '标签查询');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR351', '标签管理');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR500', '参数设置');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR501', '添加省市区');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR502', '编辑省市区');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR503', '删除省市区');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR504', '添加IP段');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR505', '编辑IP段');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR506', '删除IP段');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR507', '银行管理');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR508', '添加银行');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR509', '编辑银行');
+commit;
+prompt 100 records committed...
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR510', '删除银行');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR511', '物流公司');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR512', '添加物流公司');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR513', '编辑物流公司');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR514', '删除物流公司');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR515', '控制参数');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR516', '添加控制参数');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR517', '编辑控制参数');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR518', '删除控制参数');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR519', '订单状态');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR520', '添加订单状态');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR521', '编辑订单状态');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR522', '启用订单状态');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR523', '禁用订单状态');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR524', '订单操作');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR525', '添加订单操作');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR526', '编辑订单操作');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR527', '启用订单操作');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR528', '禁用订单操作');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR529', '区域管理');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR601', '权限查询');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR602', '权限添加修改');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR603', '权限删除');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR604', '角色查询');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR605', '角色添加修改');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR606', '角色删除');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR607', '操作员查询');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR608', '操作员添加修改');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR609', '操作员删除');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR610', '清缓存');
+insert into MB_BUSINESSER_PRIVILEGE (CODE, CAPTION)
+values ('MR611', '日志管理');
+commit;
+prompt 131 records loaded
+prompt Loading MB_BUSINESSER_ROLE...
+insert into MB_BUSINESSER_ROLE (ID, CAPTION, BUSINESSID, TYPE)
+values ('BA000001', '联盟主账号', '0', 0);
+insert into MB_BUSINESSER_ROLE (ID, CAPTION, BUSINESSID, TYPE)
+values ('BA000002', '商城主账号', '0', 0);
+insert into MB_BUSINESSER_ROLE (ID, CAPTION, BUSINESSID, TYPE)
+values ('BA000003', '联盟商城主账号', '0', 0);
+insert into MB_BUSINESSER_ROLE (ID, CAPTION, BUSINESSID, TYPE)
+values ('BA000004', '联盟一般账号（无账号管理功能、无提现功能、无安全中心功能）', '0', 0);
+insert into MB_BUSINESSER_ROLE (ID, CAPTION, BUSINESSID, TYPE)
+values ('BA000005', '联盟副账号（无提现功能）', '0', 0);
+insert into MB_BUSINESSER_ROLE (ID, CAPTION, BUSINESSID, TYPE)
+values ('BA000006', '商城副账号（无提现功能）', '0', 0);
+insert into MB_BUSINESSER_ROLE (ID, CAPTION, BUSINESSID, TYPE)
+values ('BA000007', '联盟商城副账号（无提现功能）', '0', 0);
+commit;
+prompt 7 records loaded
+prompt Loading MB_BUSINESSER_ROLE_PRIVILEGE...
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AA|001', 'BA000001');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AA|001', 'BA000002');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AA|001', 'BA000003');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AA|001', 'BA000004');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AA|001', 'BA000005');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AA|001', 'BA000006');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AA|001', 'BA000007');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|001', 'BA000001');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|001', 'BA000002');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|001', 'BA000003');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|001', 'BA000005');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|001', 'BA000006');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|001', 'BA000007');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|002', 'BA000001');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|002', 'BA000002');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|002', 'BA000003');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|002', 'BA000005');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|002', 'BA000006');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|002', 'BA000007');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|003', 'BA000001');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|003', 'BA000002');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|003', 'BA000003');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|003', 'BA000005');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|003', 'BA000006');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|003', 'BA000007');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|004', 'BA000001');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|004', 'BA000002');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|004', 'BA000003');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|004', 'BA000005');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|004', 'BA000006');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|004', 'BA000007');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|005', 'BA000001');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|005', 'BA000002');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|005', 'BA000003');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|005', 'BA000005');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|005', 'BA000006');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AB|005', 'BA000007');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AC|001', 'BA000001');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AC|001', 'BA000002');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AC|001', 'BA000003');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AC|001', 'BA000005');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AC|001', 'BA000006');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AC|001', 'BA000007');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AD|001', 'BA000001');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AD|001', 'BA000002');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AD|001', 'BA000003');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AD|001', 'BA000004');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AD|001', 'BA000005');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AD|001', 'BA000006');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AD|001', 'BA000007');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AE|001', 'BA000001');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AE|001', 'BA000002');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AE|001', 'BA000003');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AE|001', 'BA000004');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AE|001', 'BA000005');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AE|001', 'BA000006');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AE|001', 'BA000007');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AF|001', 'BA000001');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AF|001', 'BA000002');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AF|001', 'BA000003');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AG|001', 'BA000001');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AG|001', 'BA000002');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AG|001', 'BA000003');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AG|001', 'BA000004');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AG|001', 'BA000005');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AG|001', 'BA000006');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AG|001', 'BA000007');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AH|001', 'BA000001');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AH|001', 'BA000003');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AH|001', 'BA000004');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AH|001', 'BA000005');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AH|001', 'BA000007');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AI|001', 'BA000001');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AI|001', 'BA000003');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AI|001', 'BA000004');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AI|001', 'BA000005');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BC|AI|001', 'BA000007');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BM|AA|001', 'BA000001');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BM|AA|001', 'BA000003');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BM|AA|001', 'BA000005');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|BM|AA|001', 'BA000007');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|OM|AC|001', 'BA000002');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|OM|AC|001', 'BA000003');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|OM|AC|001', 'BA000006');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|OM|AC|001', 'BA000007');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|SB|AA|001', 'BA000002');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|SB|AA|001', 'BA000003');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|SB|AA|001', 'BA000006');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|SB|AA|001', 'BA000007');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|SB|AC|001', 'BA000002');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|SB|AC|001', 'BA000003');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|SB|AC|001', 'BA000006');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|SB|AC|001', 'BA000007');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|SD|AA|001', 'BA000001');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|SD|AA|001', 'BA000003');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|SD|AA|001', 'BA000004');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|SD|AA|001', 'BA000005');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|SD|AA|001', 'BA000007');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|SM|AA|003', 'BA000001');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|SM|AA|003', 'BA000003');
+commit;
+prompt 100 records committed...
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|SM|AA|003', 'BA000004');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|SM|AA|003', 'BA000005');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|SM|AA|003', 'BA000007');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|SM|AA|004', 'BA000001');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|SM|AA|004', 'BA000003');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|SM|AA|004', 'BA000004');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|SM|AA|004', 'BA000005');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|SM|AA|004', 'BA000007');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|VP|AA|001', 'BA000001');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|VP|AA|001', 'BA000003');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|VP|AA|001', 'BA000004');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|VP|AA|001', 'BA000005');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|VP|AA|001', 'BA000007');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|VP|AB|001', 'BA000001');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|VP|AB|001', 'BA000003');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|VP|AB|001', 'BA000004');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|VP|AB|001', 'BA000005');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|VP|AB|001', 'BA000007');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|VP|AC|001', 'BA000001');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|VP|AC|001', 'BA000003');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|VP|AC|001', 'BA000004');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|VP|AC|001', 'BA000005');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|VP|AC|001', 'BA000007');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|VP|AD|001', 'BA000001');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|VP|AD|001', 'BA000003');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|VP|AD|001', 'BA000004');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|VP|AD|001', 'BA000005');
+insert into MB_BUSINESSER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('B|VP|AD|001', 'BA000007');
+commit;
+prompt 128 records loaded
+prompt Loading MB_BUSINESSER_ROLE_RELATION...
+insert into MB_BUSINESSER_ROLE_RELATION (ROLEID, BUSINESSERID)
+values ('BA000001', 'BR000001');
+insert into MB_BUSINESSER_ROLE_RELATION (ROLEID, BUSINESSERID)
+values ('BA000004', 'BR000002');
+insert into MB_BUSINESSER_ROLE_RELATION (ROLEID, BUSINESSERID)
+values ('BA000005', 'BR000003');
+insert into MB_BUSINESSER_ROLE_RELATION (ROLEID, BUSINESSERID)
+values ('BA000002', 'BR000100');
+insert into MB_BUSINESSER_ROLE_RELATION (ROLEID, BUSINESSERID)
+values ('BA000006', 'BR000101');
+insert into MB_BUSINESSER_ROLE_RELATION (ROLEID, BUSINESSERID)
+values ('BA000003', 'BR100000');
+insert into MB_BUSINESSER_ROLE_RELATION (ROLEID, BUSINESSERID)
+values ('BA000007', 'BR100001');
+commit;
+prompt 7 records loaded
+prompt Loading MB_BUSINESS_PRIVILEGE...
+insert into MB_BUSINESS_PRIVILEGE (CODE, CAPTION)
+values ('P000000', '默认（不使用）');
+insert into MB_BUSINESS_PRIVILEGE (CODE, CAPTION)
+values ('P000001', '联盟页面隐藏（在联盟商家页面中不展示）');
+insert into MB_BUSINESS_PRIVILEGE (CODE, CAPTION)
+values ('P000002', '折扣（线下联盟商家必须填写折扣）');
+commit;
+prompt 3 records loaded
+prompt Loading MB_BUSINESS_RELATION...
+prompt Table is empty
+prompt Loading MB_BUSINESS_ROLE...
+insert into MB_BUSINESS_ROLE (ID, CAPTION)
+values ('B000001', '联盟商家');
+insert into MB_BUSINESS_ROLE (ID, CAPTION)
+values ('B000002', '商城商家');
+insert into MB_BUSINESS_ROLE (ID, CAPTION)
+values ('B000003', '隐藏商家');
+insert into MB_BUSINESS_ROLE (ID, CAPTION)
+values ('B000004', '系统商家');
+commit;
+prompt 4 records loaded
+prompt Loading MB_BUSINESS_ROLE_PRIVILEGE...
+insert into MB_BUSINESS_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('P000001', 'B000002');
+insert into MB_BUSINESS_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('P000001', 'B000003');
+insert into MB_BUSINESS_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('P000001', 'B000004');
+insert into MB_BUSINESS_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('P000002', 'B000001');
+commit;
+prompt 4 records loaded
+prompt Loading MB_BUSINESS_ROLE_RELATION...
+insert into MB_BUSINESS_ROLE_RELATION (ROLEID, BUSINESSID, DISABLEDATE)
+values ('B000001', 'B001002', null);
+insert into MB_BUSINESS_ROLE_RELATION (ROLEID, BUSINESSID, DISABLEDATE)
+values ('B000002', 'B001002', null);
+insert into MB_BUSINESS_ROLE_RELATION (ROLEID, BUSINESSID, DISABLEDATE)
+values ('B000003', 'B001002', null);
+insert into MB_BUSINESS_ROLE_RELATION (ROLEID, BUSINESSID, DISABLEDATE)
+values ('B000001', 'B001000', null);
+insert into MB_BUSINESS_ROLE_RELATION (ROLEID, BUSINESSID, DISABLEDATE)
+values ('B000003', 'B001000', null);
+insert into MB_BUSINESS_ROLE_RELATION (ROLEID, BUSINESSID, DISABLEDATE)
+values ('B000002', 'B001001', null);
+insert into MB_BUSINESS_ROLE_RELATION (ROLEID, BUSINESSID, DISABLEDATE)
+values ('B000003', 'B001001', null);
+commit;
+prompt 7 records loaded
+prompt Loading MB_PAY_PARAMER...
+insert into MB_PAY_PARAMER (ID, KEY, VALUE, RESUME, SUITID, DEVIATION)
+values ('FCC364872C3D5734E0432E0AA8C0CA29', 'REWARD', 1, '商家绑定会员消费提成', 'Ml00000001', 1000);
+insert into MB_PAY_PARAMER (ID, KEY, VALUE, RESUME, SUITID, DEVIATION)
+values ('FCC364872C3D5734E0432E0AA8C0CA30', 'VIP', 20, '会员价', 'Ml00000001', 1);
+commit;
+prompt 2 records loaded
+prompt Loading MB_USER_PRIVILEGE...
+insert into MB_USER_PRIVILEGE (CODE, NAME)
+values ('P000000', '默认（不使用）');
+insert into MB_USER_PRIVILEGE (CODE, NAME)
+values ('P000001', '会员价购买（商城中可用会员价购买商品）');
+commit;
+prompt 2 records loaded
+prompt Loading MB_USER_ROLE...
+insert into MB_USER_ROLE (ID, CAPTION)
+values ('U000002', '会员');
+insert into MB_USER_ROLE (ID, CAPTION)
+values ('U000001', '普通用户');
+commit;
+prompt 2 records loaded
+prompt Loading MB_USER_ROLE_PRIVILEGE...
+insert into MB_USER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('P000000', 'U000001');
+insert into MB_USER_ROLE_PRIVILEGE (PRIVILEGECODE, ROLEID)
+values ('P000001', 'U000002');
+commit;
+prompt 2 records loaded
+prompt Loading MB_USER_ROLE_RELATION...
+prompt Table is empty
+set feedback on
+set define on
+prompt Done.

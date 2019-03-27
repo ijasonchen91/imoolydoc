@@ -1,0 +1,8 @@
+{ "_id" : { "$oid" : "53950ba5ee1f093df45e59cf" }, "smsId" : 1, "caption" : "尊敬的用户，感谢注册魔力网。您本次的验证码为：ml000009 有效期为5分钟。", "code" : "sm-s-0000001", "resume" : "注册", "smsType" : 1 }
+{ "_id" : { "$oid" : "53950ba5ee1f093df45e59d0" }, "smsId" : 2, "caption" : "尊敬的用户，您本次的验证码为：ml000009，有效期为5分钟。", "code" : "sm-s-0000003", "resume" : "邮箱修改", "smsType" : 1 }
+{ "_id" : { "$oid" : "53950ba5ee1f093df45e59db" }, "smsId" : 13, "caption" : "尊敬的用户，手机号为ml000007已经成功在魔力网注册。密码为ml000008。", "code" : "sm-s-0000104", "resume" : "系统注册新用户", "smsType" : 2 }
+{ "_id" : { "$oid" : "53950ba5ee1f093df45e59dc" }, "smsId" : 14, "caption" : "尊敬的用户，您本次的验证码为：ml000009，有效期为5分钟。", "code" : "sm-s-0000002", "resume" : "手机修改", "smsType" : 1 }
+{ "_id" : { "$oid" : "53ec715f7556f4a35f5853db" }, "smsType" : 2, "code" : "sm-s-0000105", "caption" : "尊敬的用户，您已成功注册为魔力网会员。手机号ml000007，初始密码ml000008，请尽快登录网站修改密码。", "resume" : "会员注册", "smsId" : 25 }
+{ "_id" : { "$oid" : "53ed6efc7556f40b66f05363" }, "smsType" : 2, "code" : "sm-s-0000107", "caption" : "尊敬的魔力商家，有买家已付款，订单号为ml000002，请尽快发货", "resume" : "发货通知", "smsId" : 26 }
+{ "_id" : { "$oid" : "53ed7154e3dcd05033003544" }, "smsType" : 2, "code" : "sm-s-0000106", "caption" : "尊敬的用户，恭喜您成为魔力网会员，请尽情享受愉快的购物之旅吧！", "resume" : "用户充值", "smsId" : 27 }
+{ "_id" : { "$oid" : "53ef168e39aefa29d86bddf8" }, "smsId" : 4, "caption" : "尊敬的用户，您本次的验证码为：ml000009，有效期为5分钟。", "code" : "sm-s-0000004", "resume" : "密码找回", "smsType" : 1 }

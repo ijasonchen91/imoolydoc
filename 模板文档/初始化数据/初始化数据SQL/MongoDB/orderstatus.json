@@ -1,0 +1,10 @@
+{ "_id" : { "$oid" : "53e707cebcd0d41fd4506939" }, "code" : "OS002", "caption" : "已付款", "deadtime" : "0", "deadstatus" : "0", "opset" : { "1" : [ "OO104" ], "2" : [ "OO104" ], "3" : [ "OO104" ] }, "status" : "1" }
+{ "_id" : { "$oid" : "53e70857bcd0d41fd450693a" }, "code" : "OS003", "caption" : "待发货", "deadtime" : 0, "deadstatus" : "0", "opset" : { "1" : [ "OO104" ], "2" : [ "OO102", "OO104" ], "3" : [ "OO102", "OO104" ] }, "status" : 1 }
+{ "_id" : { "$oid" : "53e70863bcd0d41fd450693b" }, "code" : "OS004", "caption" : "已发货", "deadtime" : 864000, "deadstatus" : "OS005", "opset" : { "1" : [ "OO103", "OO104" ], "2" : [ "OO105" ], "3" : [ "OO105" ] }, "status" : 1 }
+{ "_id" : { "$oid" : "53e7087bbcd0d41fd450693c" }, "code" : "OS001", "caption" : "待付款", "deadtime" : 259200, "deadstatus" : "OS002", "opset" : { "1" : [ "OO101", "OO104", "OO105" ], "2" : [ "OO104", "OO105" ], "3" : [ "OO104", "OO105" ] }, "status" : 1 }
+{ "_id" : { "$oid" : "53e70890bcd0d41fd450693d" }, "code" : "OS005", "caption" : "已收货", "deadtime" : 3600, "deadstatus" : "OS901", "opset" : { "1" : [ "OO104" ], "2" : [], "3" : [] }, "status" : 1 }
+{ "_id" : { "$oid" : "53e708a6bcd0d41fd450693e" }, "code" : "OS011", "caption" : "退换货中", "deadtime" : 0, "deadstatus" : "0", "opset" : { "1" : [], "2" : [ "OO105" ], "3" : [ "OO105" ] }, "status" : 1 }
+{ "_id" : { "$oid" : "53e708bbbcd0d41fd450693f" }, "code" : "OS901", "caption" : "交易成功", "deadtime" : 0, "deadstatus" : "0", "opset" : { "1" : [], "2" : [], "3" : [] }, "status" : 1 }
+{ "_id" : { "$oid" : "53e708cebcd0d41fd4506940" }, "code" : "OS902", "caption" : "交易失败", "deadtime" : 3600, "deadstatus" : "OS903", "opset" : { "1" : [], "2" : [ "OO105" ], "3" : [ "OO105" ] }, "status" : 1 }
+{ "_id" : { "$oid" : "53e708e1bcd0d41fd4506941" }, "code" : "OS903", "caption" : "交易关闭", "deadtime" : 0, "deadstatus" : "0", "opset" : { "1" : [ "OO106" ], "2" : [ "OO106" ], "3" : [ "OO106" ] }, "status" : 1 }
+{ "_id" : { "$oid" : "53e708f6bcd0d41fd4506942" }, "code" : "OS904", "caption" : "订单已删除", "deadtime" : 0, "deadstatus" : "0", "opset" : { "1" : [], "2" : [], "3" : [] }, "status" : 1 }

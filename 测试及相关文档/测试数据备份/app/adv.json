@@ -1,0 +1,7 @@
+{ "_id" : { "$oid" : "55064f067556f4133e6f7f0c" }, "mark" : "001", "code" : "AD02-001-01-01", "template" : "T1", "maxcontent" : "5", "type" : "T001", "width" : "750", "height" : "188" }
+{ "_id" : { "$oid" : "55064f1e7556f4133e6f7f0d" }, "mark" : "001", "code" : "AD02-001-01-03", "template" : "T1", "maxcontent" : "4", "type" : "T005", "width" : "108", "height" : "108" }
+{ "_id" : { "$oid" : "55064f417556f4143e6f7f0c" }, "mark" : "001", "code" : "AD02-001-01-02", "template" : "T1", "maxcontent" : "100000000000", "type" : "T002", "width" : "690", "height" : "328" }
+{ "_id" : { "$oid" : "5506895f7556f46b3e1c9d16" }, "mark" : "002", "code" : "AD02-002-01-01", "template" : "T1", "maxcontent" : "1", "type" : "T004", "width" : "480", "height" : "447" }
+{ "_id" : { "$oid" : "550689997556f4723e1c9d16" }, "mark" : "002", "code" : "AD02-002-01-02", "template" : "T1", "maxcontent" : "1", "type" : "T004", "width" : "406", "height" : "176" }
+{ "_id" : { "$oid" : "550689b77556f46e3e1c9d16" }, "mark" : "002", "code" : "AD02-002-01-03", "template" : "T1", "maxcontent" : "1", "type" : "T004", "width" : "406", "height" : "176" }
+{ "_id" : { "$oid" : "550689db7556f4763e1c9d16" }, "mark" : "002", "code" : "AD02-001-01-04", "template" : "T1", "maxcontent" : "4", "type" : "T005", "width" : "132", "height" : "132" }
