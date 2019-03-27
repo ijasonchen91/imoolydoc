@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>注册码验证</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/forgetPassword.css" />
+<style type="text/css">
+<!--
+	@import url(css/select2css.css);
+-->
+</style>
+<script type="text/javascript" src="js/select2css.js"></script>
+</head>
+<body style="background:#f2f2f2;">
+
+<div class="top">
+	<div class="logo">
+        <a href="/"><img src="img/login_logo2.png" alt="魔力网logo"></a>   
+	</div>
+</div>
+<div class="suc_content forgetpassword">
+  <div class="suc_kuang">
+    <div class="hei_513">
+      <div class="info">
+        <span class="left_name">
+          <span class="m_name"><a href="/" class="color_33">注册</a>&nbsp;&nbsp;&gt;</span>
+          <span class="m_func">注册码验证</span>
+        </span>
+     </div>
+      <form method="post" action="/pass/forgetPassword" id="forgetPassword">
+        <div class="resetPass_content" style="margin-top:15px;">
+			<dl class="clearfix">
+			   <dt class="dt_l">用户名：</dt>
+			   <dd class="dd_r" id="pwdTd">
+				 <div class="controls"><input type="password" class="register_input"><span class="validate_info" id="ticket_phone">*用户名只能由中文、英文、数字组成</span></div>
+				 
+			   </dd> 
+			   <dt class="dt_l">密码：</dt>
+			   <dd class="dd_r">
+			     <div class="controls"><input type="password" class="register_input"><span class="validate_info" id="ticket_phone">*密码长度8~16位，数字、字母、字符至少包含两种</span></div>
+			   </dd>
+			   <dt class="dt_l">重复密码：</dt>
+			   <dd class="dd_r">
+			     <div class="controls"><input type="password" class="register_input"><span class="validate_info" id="ticket_phone">*</span></div>
+			   </dd>
+			   <dt class="dt_l">店名：</dt>
+			   <dd class="dd_r" id="pwdTd">
+				 <div class="controls"><input type="password" class="register_input"><span class="validate_info" id="ticket_phone">*</span></div>
+			   </dd> 
+			   <dt class="dt_l">店主姓名：</dt>
+			   <dd class="dd_r" id="pwdTd">
+				 <div class="controls"><input type="password" class="register_input"><span class="validate_info" id="ticket_phone">*</span></div>
+			   </dd> 
+			   <dt class="dt_l">地址：</dt>
+			   <dd class="dd_r" id="pwdTd">
+				 <div class="controls">
+				<div id="uboxstyle" class="div_select" >
+				<select name="sheng" >
+					<option >--省--</option>
+					<option>测试生</option>
+					<option>北京市</option>
+					<option>天津市</option>
+					<option>上海市</option>
+					<option>重庆市</option>
+					<option>河北省</option>
+					<option>山西省</option>
+					<option>台湾省</option>
+					<option>辽宁省</option>
+					<option>吉林省</option>
+					<option>黑龙江省</option>
+					<option>江苏省</option>
+					<option>浙江省</option>
+					<option>安徽省</option>
+					<option>福建省</option>
+					<option>江西省</option>
+					<option>山东省</option>
+					<option>河南省</option>
+					<option>湖北省</option>
+					<option>湖南省</option>
+					<option>广东省</option>
+					<option>甘肃省</option>
+					<option>四川省</option>
+					<option>贵州省</option>
+					<option>海南省</option>
+					<option>云南省</option>
+					<option>青海省</option>
+					<option>陕西省</option>
+					<option>广西壮族自治区</option>
+					<option>西藏自治区</option>
+					<option>宁夏回族自治区</option>
+					<option>新疆维吾尔自治区</option>
+					<option>内蒙古自治区</option>
+					<option>澳门特别行政区</option>
+					<option>香港特别行政区</option>
+				</select>
+			
+				</div>
+				<div  class="div_select" style="margin:0 10px 0 10px;">
+                <select name="shi">
+				<option>--市--</option>
+                </select>
+				</div>
+				
+				<div class="div_select" style="margin:0 10px 0 0;">
+                <select name="qu">
+				<option>--区--</option>
+                </select>
+				</div>
+				
+				
+				 <span class="validate_info" id="ticket_phone">*</span>
+				 </div>
+			   </dd>
+			   <dt class="dt_l">详细地址：</dt>
+			   <dd class="dd_r" id="pwdTd">
+				 <div class="controls"><input type="password" class="register_input"><span class="validate_info" id="ticket_phone">*</span></div>
+			   </dd> 
+			   <dt class="dt_l">银行卡号：</dt>
+			   <dd class="dd_r" id="pwdTd">
+				 <div class="controls"><input type="password" class="register_input"><span class="validate_info" id="ticket_phone">*</span></div>
+			   </dd>  
+			   <dt class="dt_l">重复银行卡号：</dt>
+			   <dd class="dd_r" id="pwdTd">
+				 <div class="controls"><input type="password" class="register_input"><span class="validate_info" id="ticket_phone">*</span></div>
+			   </dd> 
+			   
+			   <dt class="dt_l"></dt>
+			   <dd class="dd_r">
+				<div class="controls"><a type="submit" href="register -02.html" class="btn btn-success"> 下一步</a></div>
+			   </dd>
+			 </dl>
+        </div> 
+      </form>
+    </div>
+    <div class="suc_botm"></div>
+  </div>
+</div>
+<div class="footer" style="width:auto;">
+  <ul class="links">
+    <li class="copyright"><span>2014 © IMOOLY Admin.</span></li>
+  </ul>
+</div>
+</body>
+</html>

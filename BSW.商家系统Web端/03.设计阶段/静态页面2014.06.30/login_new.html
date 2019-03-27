@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>登录页面</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/login.css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+
+
+<body>
+<div style="width:100%;height:100px;border-top:4px solid #ff770b;border-bottom:4px solid #e1e1e1;line-height:100px;">
+<div style="width:960px;margin:0 auto;"><img src="img/logo_login.png"/></div>
+</div>
+<div style="background: url(img/bg_middle.jpg) no-repeat center 0px transparent;" class="content_info">
+	<div class="nl-frame-container">
+      <div class="controls">
+		<input type="text" placeholder="账号/邮箱/手机号" >
+		<div style="margin-left: 10px;line-height: 44px;display: inline-block;">
+			<span class="field-validation-error" data-valmsg-for="UserName" data-valmsg-replace="true" style="color:red;">
+				<span htmlfor="UserName" generated="true" class="">用户名不能为空</span>
+			</span>
+		</div>
+	  </div>
+	  <div class="controls" style="margin-top: 32px;">
+		<input type="password" placeholder="密码" autocomplete="off">
+		<div style="margin-left: 10px;line-height: 44px;display: inline-block;">
+			<span class="field-validation-error" data-valmsg-for="UserName" data-valmsg-replace="true" style="color:red;">
+				<span htmlfor="UserName" generated="true" class="">用户名不能为空</span>
+			</span>
+		</div>
+
+	  </div>
+	  <div class="controls" style="margin-left: 0px;"><a type="submit" href="index.html" class="btn btn-success" style="width: 504px;margin: 66px 0 30px 46px;"> 登录</a></div>
+	  <div class="ng-foot">
+		<span class="ng-cookie-area" style="margin-left:46px;">
+			<a href="register.html" target="_blank">注册魔力用户</a>
+		</span>
+		<span class="ng-link-area">
+			<a href="forgetPassword.html" target="_blank" style="color: #3094d2;text-decoration: underline;">忘记密码？</a>
+		</span>
+	  </div>
+	  
+    </div>
+</div>
+<div class="nl-footer" id="custom_display_4">
+    <p class="nl-f-copyright">2014 © IMOOLY Admin.</p>
+</div>
+
+<script>
+	var info_height=document.body.clientHeight-108+"px";
+	$(".content_info").css("height",info_height);
+	alert
+</script>
+</body>
+</html>

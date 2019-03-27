@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>注册码验证</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/forgetPassword.css" />
+<style type="text/css">
+<!--
+	@import url(css/select2css.css);
+-->
+</style>
+<script type="text/javascript" src="js/select2css.js"></script>
+</head>
+<body style="background:#f2f2f2;">
+
+<div class="top">
+	<div class="logo">
+        <a href="/"><img src="img/login_logo2.png" alt="魔力网logo"></a>   
+	</div>
+</div>
+<div class="suc_content forgetpassword">
+  <div class="suc_kuang">
+    <div class="hei_513">
+      <div class="info">
+        <span class="left_name">
+          <span class="m_name"><a href="/" class="color_33">注册</a>&nbsp;&nbsp;&gt;</span>
+          <span class="m_func">注册码验证</span>
+        </span>
+     </div>
+      <form method="post" action="/pass/forgetPassword" id="forgetPassword">
+        <div class="resetPass_content" style="margin-top:15px;">
+			<dl class="clearfix">
+			   <dt class="dt_l">用户名：</dt>
+			   <dd class="dd_r" id="pwdTd">
+				 <div class="controls"><input type="password" class="register_input"><span class="validate_info" id="ticket_phone">*用户名只能由中文、英文、数字组成</span></div>
+				 
+			   </dd> 
+			   <dt class="dt_l">密码：</dt>
+			   <dd class="dd_r">
+			     <div class="controls"><input type="password" class="register_input"><span class="validate_info" id="ticket_phone">*密码长度8~16位，数字、字母、字符至少包含两种</span></div>
+			   </dd>
+			   <dt class="dt_l">重复密码：</dt>
+			   <dd class="dd_r">
+			     <div class="controls"><input type="password" class="register_input"><span class="validate_info" id="ticket_phone">*</span></div>
+			   </dd>
+			   <dt class="dt_l">店名：</dt>
+			   <dd class="dd_r" id="pwdTd">
+				 <div class="controls"><input type="password" class="register_input"><span class="validate_info" id="ticket_phone">*</span></div>
+			   </dd> 
+			   <dt class="dt_l">店主姓名：</dt>
+			   <dd class="dd_r" id="pwdTd">
+				 <div class="controls"><input type="password" class="register_input"><span class="validate_info" id="ticket_phone">*</span></div>
+			   </dd>
+			   <dt class="dt_l"></dt>
+			   <dd class="dd_r">
+				<div class="controls"><input type="submit" href="register -02.html" class="btn btn-success" value="下一步" /> </div>
+			   </dd>
+			 </dl>
+        </div> 
+      </form>
+    </div>
+    <div class="suc_botm"></div>
+  </div>
+</div>
+<div class="footer" style="width:auto;">
+  <ul class="links">
+    <li class="copyright"><span>2014 © IMOOLY Admin.</span></li>
+  </ul>
+</div>
+</body>
+</html>

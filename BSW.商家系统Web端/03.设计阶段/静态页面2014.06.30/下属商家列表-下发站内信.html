@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>下属商家列表-下发站内信</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/matrix-style.css" />
+<link rel="stylesheet" href="css/matrix-media.css" />
+<script src="js/jquery.min.js"></script> 
+<script type="text/javascript">
+$(function(){
+
+	$(".sq_ing").hide();
+	$("#fksq").change(function(){
+		if($("#fksq option:selected").val()=="sq_ing"){
+			$(".sq").hide();
+			$(".sq_ing").show();
+		}
+		if($("#fksq option:selected").val()=="sq"){
+			$(".sq").show();
+			$(".sq_ing").hide();
+		}
+	});
+});
+
+</script>
+</head>
+<body>
+
+<!--Header-part-->
+<div id="header">
+  <h1><a href="dashboard.html">魔力网</a></h1>
+</div>
+<!--close-Header-part--> 
+
+<!--top-Header-menu-->
+<div id="user-storeName">石曼火锅店BalalaBoom...............</div>
+<div id="user-nav" class="navbar navbar-inverse">
+  <ul class="nav">
+	<li class="dropdown" id="profile-messages" ><a title="基本信息" href="商家中心.html" ><i class="user-nav-iHallo"></i> <span class="text">您好！ 石妹纸</span></a></li>
+    <li class=""><a title="修改密码" href="安全-密码.html"><i class="user-nav-iPWD"></i> <span class="text">修改密码</span></a></li>
+    <li class=""><a title="我的消息" href="通知公告.html"><i class="user-nav-iMsg"></i> <span class="text">我的消息</span></a></li>
+    <li class=""><a title="退出系统" href="login.html"><i class="user-nav-iOff"></i> <span class="text">退出系统</span></a></li>
+  </ul>
+</div>
+<!--close-top-Header-menu-->
+
+<!--sidebar-menu-->
+<div id="sidebar">
+  <ul>
+    <li> <a href="产生魔豆.html" title="订单中心"><i class="icon icon_mune-manageOrders"></i> <span>订单管理</span></a></li>
+	<li><a href="预售商品.html" title="商品管理"><i class="icon icon_mune-proOrders"></i> <span>商品管理</span></a></li>
+	<li><a href="商家中心 - 激活.html" title="商家中心"><i class="icon icon_mune-manageStore"></i> <span>商家中心</span></a></li>
+	<li><a href="H_账单管理_待付款.html" title="账单管理"><i class="icon icon_mune-selectOrders"></i> <span>账单管理</span></a></li>
+    <li class="active"><a href="下属商家列表-商家清单.html" title="下属商家管理"><i class="icon icon_mune-insertOrders"></i> <span>下属商家管理</span></a></li>
+  </ul>
+</div>
+<!--sidebar-menu-->
+
+<!--main-container-part-->
+<div id="content">
+<!--breadcrumbs-->
+  <div id="content-header">
+    <div id="breadcrumb"> <a href="#" ><i class="icon-home-breadcrumb"></i> 下属商家管理</a><a href="下属商家列表-下发站内信.html" class="current">下发站内信</a></div>
+  </div>
+<!--End-breadcrumbs-->
+
+<!--Action boxes-->
+  <div class="container-fluid">
+		<div class="quick-actions_homepage">
+		  <ul class="quick-actions">
+			<li class="bg_lo"> <a href="下属商家列表-商家清单.html"> <strong> 商家清单</strong></a> </li>
+			<li class="bg_ls"> <a href="下属商家列表-账单中心.html"> <strong> 账单中心</strong></a> </li>
+			<li class="bg_lb"> <a href="下属商家列表-商家付款申请.html"> <strong> 商家付款申请</strong></a> </li>
+			<li class="bg_lg span3"> <a href="下属商家列表-下属商家添加.html"> <strong> 下属商家添加</strong></a> </li>
+			<li class="bg_lr"> <a href="下属商家列表-下发站内信.html"> <strong> 下发站内信</strong></a> </li>
+		  </ul>
+		</div>
+          <div class="widget-box">
+		  
+          <div class="widget-title"> <span class="icon"> <i class="icon-search"></i> </span>
+            <h5>发送站内信</h5>
+		  </div>
+		  <div class="widget-content nopadding">
+		   <form action="#" method="get" class="form-horizontal">
+		   <div class="control-group">
+               <label class="control-label">查询方式：</label>
+               <div class="controls">
+			    <select id="fksq">
+				  <option value="sq">区域查询</option>
+				  <option value="sq_ing">精确查询</option>
+				</select>
+				</div>
+			</div>
+		   <div class="control-group sq">
+              <label class="control-label">选择地区：</label>
+               <div class="controls">
+				<select style="width:25%">
+					<option >--省--</option>
+					<option>测试生</option>
+					<option>北京市</option>
+					<option>天津市</option>
+					<option>上海市</option>
+					<option>重庆市</option>
+					<option>河北省</option>
+					<option>山西省</option>
+					<option>台湾省</option>
+					<option>辽宁省</option>
+					<option>吉林省</option>
+					<option>黑龙江省</option>
+					<option>江苏省</option>
+					<option>浙江省</option>
+					<option>安徽省</option>
+					<option>福建省</option>
+					<option>江西省</option>
+					<option>山东省</option>
+					<option>河南省</option>
+					<option>湖北省</option>
+					<option>湖南省</option>
+					<option>广东省</option>
+					<option>甘肃省</option>
+					<option>四川省</option>
+					<option>贵州省</option>
+					<option>海南省</option>
+					<option>云南省</option>
+					<option>青海省</option>
+					<option>陕西省</option>
+					<option>广西壮族自治区</option>
+					<option>西藏自治区</option>
+					<option>宁夏回族自治区</option>
+					<option>新疆维吾尔自治区</option>
+					<option>内蒙古自治区</option>
+					<option>澳门特别行政区</option>
+					<option>香港特别行政区</option>
+				</select>
+				<select style="width:30%">
+                  <option>--市--</option>
+                </select>
+				
+				<select style="width:15%">
+                  <option>--区--</option>
+                </select>
+              </div>
+            </div>
+		   <div class="control-group sq_ing">
+				<label class="control-label">输入关键字：</label>
+				<div class="controls">
+					<input type="text" class="span6 m-wrap"><button type="submit" class="btn btn-success" style="margin:0 0 0 10px;">查询</button>
+				</div>
+		   </div>
+			<div class="control-group sq_ing">
+				<label class="control-label"></label>
+				<div class="controls">
+				<div class="widget-box" style="width:99%;margin:0;">
+					<div class="widget-title"> <span class="icon"> <i class="icon-list"></i> </span>
+					  <h5>商家列表</h5>
+					</div>
+					 <div class="dataTables_wrapper">
+						<table class="table table-bordered data-table">
+						  <thead>
+							<tr>
+							  <th style="width:60px;"><input type="checkbox" /> 全选</th>
+							  <th>店名</th>
+							  <th>店主姓名</th>
+							  <th>地址</th>
+							  <th>联系方式</th>
+							  <th>注册时间</th>
+							  <th class="taskOptions" style="width:60px;">锁定/解锁</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr class="gradeA">
+							  <td><input type="checkbox" /></td>
+							  <td>某某店</td>
+							  <td>张某某</td>
+							  <td>0512-12345685</td>
+							  <td>2014-05-04 17:00:17</td>
+							  <td></td>
+							  <td class="taskOptions"><a href="#" class="btn btn-danger btn-mini">锁定</a></td>
+							</tr>
+							<tr class="gradeA">
+							  <td><input type="checkbox" /></td>
+							  <td>某某店</td>
+							  <td>张某某</td>
+							  <td>0512-12345685</td>
+							  <td>2014-05-04 17:00:17</td>
+							  <td></td>
+							  <td class="taskOptions"><a href="#" class="btn btn-success btn-mini">解锁</a></td>
+							</tr>
+							<tr class="gradeA">
+							  <td><input type="checkbox" /></td>
+							  <td>某某店</td>
+							  <td>王某某</td>
+							  <td>0512-12345685</td>
+							  <td>2014-05-04 17:00:17</td>
+							  <td></td>
+							  <td class="taskOptions"><a href="#" class="btn btn-success btn-mini">解锁</a></td>
+							</tr>
+							<tr class="gradeA">
+							  <td><input type="checkbox" /></td>
+							  <td>某某店</td>
+							  <td>张三某</td>
+							  <td>0512-12345685</td>
+							  <td>2014-05-04 17:00:17</td>
+							  <td></td>
+							  <td class="taskOptions"><a href="#" class="btn btn-success btn-mini">解锁</a></td>
+							</tr>
+							<tr class="gradeA">
+							  <td><input type="checkbox" /></td>
+							  <td>某某店</td>
+							  <td>李四某</td>
+							  <td>0512-12345685</td>
+							  <td>2014-05-04 17:00:17</td>
+							  <td></td>
+							  <td class="taskOptions"><a href="#" class="btn btn-success btn-mini">解锁</a></td>
+							</tr>
+							<tr class="gradeA">
+							  <td><input type="checkbox" /></td>
+							  <td>某某店</td>
+							  <td>甲某</td>
+							  <td>0512-12345685</td>
+							  <td>2014-05-04 17:00:17</td>
+							  <td></td>
+							  <td class="taskOptions"><a href="#" class="btn btn-success btn-mini">解锁</a></td>
+							</tr>
+							<tr class="gradeA">
+							  <td><input type="checkbox" /></td>
+							  <td>某某店</td>
+							  <td>张三某</td>
+							  <td>0512-12345685</td>
+							  <td>2014-05-04 17:00:17</td>
+							  <td></td>
+							  <td class="taskOptions"><a href="#" class="btn btn-success btn-mini">解锁</a></td>
+							</tr>
+							<tr class="gradeA">
+							  <td><input type="checkbox" /></td>
+							  <td>某某店</td>
+							  <td>李四某</td>
+							  <td>0512-12345685</td>
+							  <td>2014-05-04 17:00:17</td>
+							  <td></td>
+							  <td class="taskOptions"><a href="#" class="btn btn-success btn-mini">解锁</a></td>
+							</tr>
+							<tr class="gradeA">
+							  <td><input type="checkbox" /></td>
+							  <td>某某店</td>
+							  <td>甲某</td>
+							  <td>0512-12345685</td>
+							  <td>2014-05-04 17:00:17</td>
+							  <td></td>
+							  <td class="taskOptions"><a href="#" class="btn btn-success btn-mini">解锁</a></td>
+							</tr>
+							<tr class="gradeA">
+							  <td><input type="checkbox" /></td>
+							  <td>某某店</td>
+							  <td>张三某</td>
+							  <td>0512-12345685</td>
+							  <td>2014-05-04 17:00:17</td>
+							  <td></td>
+							  <td class="taskOptions"><a href="#" class="btn btn-success btn-mini">解锁</a></td>
+							</tr><tr class="gradeA">
+							  <td><input type="checkbox" /></td>
+							  <td>某某店</td>
+							  <td>李四某</td>
+							  <td>0512-12345685</td>
+							  <td>2014-05-04 17:00:17</td>
+							  <td></td>
+							  <td class="taskOptions"><a href="#" class="btn btn-success btn-mini">解锁</a></td>
+							</tr><tr class="gradeA">
+							  <td><input type="checkbox" /></td>
+							  <td>某某店</td>
+							  <td>甲某</td>
+							  <td>0512-12345685</td>
+							  <td>2014-05-04 17:00:17</td>
+							  <td></td>
+							  <td class="taskOptions"><a href="#" class="btn btn-success btn-mini">解锁</a></td>
+							</tr>
+							<tr class="gradeA">
+							  <td><input type="checkbox" /></td>
+							  <td>某某店</td>
+							  <td>张三某</td>
+							  <td>0512-12345685</td>
+							  <td>2014-05-04 17:00:17</td>
+							  <td></td>
+							  <td class="taskOptions"><a href="#" class="btn btn-success btn-mini">解锁</a></td>
+							</tr>
+						  </tbody>
+						</table>
+						<div class="ui-widget-header ui-toolbar">
+							<div class="dataTables_paginate">	
+								<div class="pagination alternate">
+								  <ul>
+									<li class="disabled"><a href="#">首页</a></li>
+									<li class="disabled"><a href="#">上一页</a></li>
+									<li class="active"> <a href="#">1</a> </li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">下一页</a></li>
+									<li><a href="#">最后</a></li>
+								  </ul>
+								</div>
+							</div>	
+						</div>
+					 </div>
+				</div>
+				</div>
+			</div>
+		    <div class="control-group">
+              <label class="control-label">公告内容：</label>
+              <div class="controls">
+                <textarea class="textarea_editor span12" rows="2" placeholder="Enter text ..." style="width:98%;"></textarea>
+              </div>
+            </div>		
+			<div class="control-group">
+              <label class="control-label"></label>
+              <div class="controls">
+                <button type="submit" class="btn btn-success">发送</button>
+              </div>
+            </div>		  
+		  </form>
+		  </div>
+		  </div>
+		 
+  </div>
+</div>
+
+<!--end-main-container-part-->
+
+<!--Footer-part-->
+
+<div class="row-fluid">
+  <div id="footer" class="span12"> 2014 &copy; IMOOLY  Admin. Brought to you by <a href="http://www.imooly.com">imooly.com</a> </div>
+</div>
+
+<!--end-Footer-part-->
+
+</body>
+</html>

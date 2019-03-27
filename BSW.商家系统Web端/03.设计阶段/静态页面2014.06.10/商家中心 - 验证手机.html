@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>商家中心 - 验证手机</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/matrix-style.css" />
+<link rel="stylesheet" href="css/matrix-media.css" />
+<link rel="stylesheet" href="css/select2.css" />
+</head>
+<body>
+
+<!--Header-part-->
+<div id="header">
+  <h1><a href="dashboard.html">魔力网</a></h1>
+</div>
+<!--close-Header-part--> 
+
+<!--top-Header-menu-->
+<div id="user-storeName">石曼火锅店BalalaBoom...............</div>
+<div id="user-nav" class="navbar navbar-inverse">
+  <ul class="nav">
+	<li class="dropdown" id="profile-messages" ><a title="" href="#" ><i class="user-nav-iHallo"></i> <span class="text">您好！ 石妹纸</span></a></li>
+    <li class=""><a title="" href="#"><i class="user-nav-iPWD"></i> <span class="text">修改密码</span></a></li>
+    <li class=""><a title="" href="login.html"><i class="user-nav-iMsg"></i> <span class="text">我的消息</span></a></li>
+    <li class=""><a title="" href="login.html"><i class="user-nav-iOff"></i> <span class="text">退出系统</span></a></li>
+  </ul>
+</div>
+<!--close-top-Header-menu-->
+
+<!--sidebar-menu-->
+<div id="sidebar">
+  <ul>
+    <li> <a href="订单中心.html" title="订单中心"><i class="icon icon_mune-manageOrders"></i> <span>订单管理</span></a></li>
+	<li class="active"><a href="商家中心.html" title="商家中心"><i class="icon icon_mune-manageStore"></i> <span>商家中心</span></a></li>
+	<li><a href="H_账单管理_账单查询.html" title="账单管理"><i class="icon icon_mune-selectOrders"></i> <span>账单管理</span></a></li>
+    <li><a href="下属商家列表-商家列表.html" title="下属商家管理"><i class="icon icon_mune-insertOrders"></i> <span>下属商家管理</span></a></li>
+	<li><a href="M_商城管理_查看商品.html" title="商城管理"><i class="icon icon_mune-proOrders"></i> <span>商城管理</span></a></li>
+    
+  </ul>
+</div>
+<!--sidebar-menu-->
+
+<!--main-container-part-->
+<div id="content">
+<!--breadcrumbs-->
+  <div id="content-header">
+    <div id="breadcrumb"> <a href="欢迎页面.html" ><i class="icon-home-breadcrumb"></i> 商家中心</a> </div>
+  </div>
+<!--End-breadcrumbs-->
+
+<!--Action boxes-->
+  <div class="container-fluid">
+		<div class="quick-actions_homepage">
+		  <ul class="quick-actions">
+			<li class="bg_lg"> <a href="商家中心 - 激活.html"> <i class="icon_big_jihuo"></i> <strong> 激活账户</strong> </a> </li>
+			<li class="bg_lb"> <a href="商家中心.html"> <i class="icon_big_tint"></i> <strong> 基本信息</strong> </a> </li>
+			<li class="bg_ly"> <a href="装修2.html"> <i class="icon_big_fullscreen"></i> <strong> 装饰店铺</strong> </a> </li>
+			<li class="bg_lg"> <a href="商家中心 - 用户管理.html"> <i class="icon_big_dashboard"></i> <strong>用户管理</strong></a> </li>
+			<li class="bg_lo"> <a href="安全-手机.html"> <i class="icon_big_pencil"></i> <strong>安全中心</strong></a> </li>
+			<li class="bg_ly"> <a href="通知公告.html"> <i class="icon_big_th_list"></i> <strong>通知公告</strong> </a> </li>
+		  </ul>
+		</div>
+          <div class="widget-box">
+          <div class="widget-title"> <span class="icon"> <i class="icon-edit-"></i> </span>
+            <h5>激活 - 验证手机</h5>
+		  </div>
+          <div class="widget-content nopadding">
+		  <form action="商家中心 - 验证邮箱.html" method="get" class="form-horizontal">
+			<div class="control-group">
+              <label class="control-label">手机号码:</label>
+              <div class="controls">
+				<input id="username" type="text" name="user-code" class="ui-wizard-content"> <button type="submit" class="btn btn-danger">获取验证码</button> 
+				<span class="validate_info" id="ticket_phone">* 请输入正确的手机号码</span>
+              </div>
+            </div>
+		    <div class="control-group">
+              <label class="control-label">输入验证码:</label>
+              <div class="controls">
+				<input type="text" class="span3 m-wrap">
+              </div>
+            </div>
+			<div class="form-actions">
+              <button type="submit" class="btn btn-success">下一步</button>
+            </div>
+			
+		  </form> 
+		  </div>
+          </div>
+  </div>
+</div>
+
+<!--end-main-container-part-->
+
+<!--Footer-part-->
+
+<div class="row-fluid">
+  <div id="footer" class="span12"> 2014 &copy; IMOOLY  Admin. Brought to you by <a href="http://www.imooly.com">imooly.com</a> </div>
+</div>
+
+<!--end-Footer-part-->
+
+</body>
+</html>

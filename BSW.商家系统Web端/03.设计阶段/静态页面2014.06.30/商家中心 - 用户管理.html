@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>商家中心-用户管理</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/matrix-style.css" />
+<link rel="stylesheet" href="css/matrix-media.css" />
+<link rel="stylesheet" href="css/jquery.treeview.css" />
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/jquery.treeview.js" type="text/javascript"></script>
+<script type="text/javascript">
+		$(function() {
+			$("#tree").treeview({
+				collapsed: false,
+				animated: "medium",
+				control:"#sidetreecontrol",
+				persist: "location"
+			});
+			//添加右键信息
+			var right_Info="<div class='link'><i class='icon-plus' title='添加分账号'></i> <i class='icon-PWD' title='修改密码'></i> <i class='icon-start' title='点击启用'></i> <i class='icon-Del' title='删除用户'></i></div>";   
+			$("#tree li").each(function(){
+			    $(this).find("span").first().after(right_Info);//追加内容
+				$(this).find("span").first().hover( //鼠标经过显示右击内容
+					function () { 
+						$("ul li").each(function(){//取消之前的样式
+							$(this).find(".link").css("display","none");
+						});
+						$(this).parent().find(".link").first().css("display","inline-block");//选中样式
+					}
+				);
+			});
+		})
+
+	function drag(oDiv){
+		var _move = false; //移动标记
+		var _x, _y;
+		var index_x, index_y;
+		$(oDiv).bind("mousedown", downIndex); //div鼠标按下事件绑定
+		$(document).bind("mousemove", mmove); //鼠标移动事件绑定
+		$(document).bind("mouseup", mup); //鼠标弹起事件绑定
+		function mmove(e) {
+			if (_move) {
+				var x = e.pageX - _x; //移动时根据鼠标位置计算控件左上角的绝对位置
+				var y = e.pageY - _y;
+				$(oDiv).css({ top: y, left: x }); //div新位置
+				show(x, y);
+			}
+		}
+		function mup() {
+			_move = false;
+		}
+		function downIndex(e) {
+			_move = true;
+			_x = e.pageX - parseInt($(oDiv).css("left"));
+			_y = e.pageY - parseInt($(oDiv).css("top"));
+
+		}
+	}
+
+	window.onload = function (){
+		 var oDiv = document.getElementById("add-inner");
+		 drag(oDiv);
+	}
+</script>
+
+
+</head>
+<body>
+
+<!--Header-part-->
+<div id="header">
+  <h1><a href="dashboard.html">魔力网</a></h1>
+</div>
+<!--close-Header-part--> 
+
+<!--top-Header-menu-->
+<div id="user-storeName">石曼火锅店BalalaBoom...............</div>
+<div id="user-nav" class="navbar navbar-inverse">
+  <ul class="nav">
+	<li class="dropdown" id="profile-messages" ><a title="基本信息" href="商家中心.html" ><i class="user-nav-iHallo"></i> <span class="text">您好！ 石妹纸</span></a></li>
+    <li class=""><a title="修改密码" href="安全-密码.html"><i class="user-nav-iPWD"></i> <span class="text">修改密码</span></a></li>
+    <li class=""><a title="我的消息" href="通知公告.html"><i class="user-nav-iMsg"></i> <span class="text">我的消息</span></a></li>
+    <li class=""><a title="退出系统" href="login.html"><i class="user-nav-iOff"></i> <span class="text">退出系统</span></a></li>
+  </ul>
+</div>
+<!--close-top-Header-menu-->
+
+<!--sidebar-menu-->
+<div id="sidebar">
+  <ul>
+    <li> <a href="产生魔豆.html" title="订单中心"><i class="icon icon_mune-manageOrders"></i> <span>订单管理</span></a></li>
+	<li><a href="预售商品.html" title="商品管理"><i class="icon icon_mune-proOrders"></i> <span>商品管理</span></a></li>
+	<li class="active"><a href="商家中心 - 激活.html" title="商家中心"><i class="icon icon_mune-manageStore"></i> <span>商家中心</span></a></li>
+	<li><a href="H_账单管理_待付款.html" title="账单管理"><i class="icon icon_mune-selectOrders"></i> <span>账单管理</span></a></li>
+    <li><a href="下属商家列表-商家清单.html" title="下属商家管理"><i class="icon icon_mune-insertOrders"></i> <span>下属商家管理</span></a></li>
+  </ul>
+</div>
+<!--sidebar-menu-->
+
+<!--main-container-part-->
+<div id="content">
+<!--breadcrumbs-->
+  <div id="content-header">
+	<div id="breadcrumb"> <a href="#" ><i class="icon-home-breadcrumb"></i> 商家中心</a><a href="商家中心 - 用户管理.html" class="current">用户管理</a> </div>
+  </div>
+<!--End-breadcrumbs-->
+
+<!--Action boxes-->
+  <div class="container-fluid">
+		<div class="quick-actions_homepage">
+		  <ul class="quick-actions">
+			<li class="bg_lb"> <a href="商家中心 - 激活.html"> <strong> 激活</strong> </a> </li>
+			<li class="bg_ly"> <a href="商家中心.html"> <strong> 基本信息</strong> </a> </li>
+			<li class="bg_lg span3"> <a href="商家中心 - 用户管理.html"> <strong>用户管理</strong></a> </li>
+			<li class="bg_lo"> <a href="安全-手机.html"> <strong>安全中心</strong></a> </li>
+			<li class="bg_ly"> <a href="通知公告.html"> <strong>通知公告</strong> </a> </li>
+			<li class="bg_lo span3"> <a href="商家中心 - 提现.html"> <strong> 提现</strong></a> </li>
+			<li class="bg_ls"> <a href="商家中心 - 流水.html"> <strong> 流水</strong></a> </li>
+			<li class="bg_lb"> <a href="商家中心 - 操作日志.html"> <strong> 操作日志</strong></a> </li>
+			<li class="bg_lg"> <a href="商家中心 - 绑定会员.html"> <strong> 绑定会员</strong></a> </li>
+			<li class="bg_lr"> <a href="商家中心 - 评价.html"> <strong> 评价</strong></a> </li>
+		  </ul>
+		</div>
+          <div class="widget-box">
+          <div class="widget-title"> <span class="icon"> <i class="icon-signal"></i> </span>
+            <h5>所有用户</h5>
+		  </div>
+          <div class="widget-content nopadding">
+				<div id="sidetree">
+					<div class="treeheader">&nbsp;</div>
+					<div id="sidetreecontrol"><a href="?#">全部折叠</a> | <a href="?#">全部展开</a></div>
+
+					<ul id="tree">
+						<li><div><strong>啥子火锅店</strong></div>
+						<ul>
+							<li><span>大火锅店01</span>  
+								<ul>
+									<li><span>火锅店01(大火锅)</span>
+										<ul>
+											<li><span>店主</span>
+												<ul>
+													<li><span>辣妹子辣妹子不怕辣(店主)</span></li>
+												</ul>
+											</li>
+											<li><span>店员</span>
+												<ul>
+													<li><span>辣妹子01(店员)</span></li>
+													<li><span>辣妹子02(店员)</span></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li><span>火锅店02(大火锅)</span></li>
+									<li><span>火锅店03(大火锅)</span></li>
+								</ul>
+							</li>
+							<li><span>中火锅店01</span>
+								<ul>
+									<li><span>火锅店01(中火锅)</span></li>
+									<li><span>火锅店02(中火锅)</span></li>
+								</ul>
+							</li>
+							<li><span>小火锅店01</span></li>
+						</ul>
+						</li>
+						
+					</ul>
+				</div>
+				
+				<div class="widget-box" style="width: 60%;position: absolute;top: 40px;right: 20px;">
+				  <div class="widget-title"> <span class="icon"> <i class="icon-list"></i> </span>
+					<h5>角色管理</h5>
+					<a href="商家中心 - 用户管理 - 添加角色.html"><span id="open-add" class="label label-info">添加角色</span></a>
+				  </div>
+				  <div class="widget-content nopadding">
+					<table class="table table-bordered data-table">
+					  <thead>
+						<tr>
+						  <th>角色名称</th>
+						  <th>权限</th>
+						  <th>操作</th>
+						</tr>
+					  </thead>
+					  <tbody>
+						<tr class="gradeA">
+						  <td>店主</td>
+						  <td class="taskOptions"><a href="商家中心 - 用户管理 - 权限.html" class="btn btn-success btn-mini">查看权限</a></td>
+						  <td class="taskOptions">
+							<a href="商家中心 - 用户管理 - 权限.html"><i class="icon-edit-" title="修改权限"></i></a>
+							<i class="icon-Del" title="删除角色"></i>
+						  </td>
+						</tr>
+						<tr class="gradeA">
+						  <td>店员</td>
+						  <td class="taskOptions"><a href="商家中心 - 用户管理 - 权限.html" class="btn btn-success btn-mini">查看权限</a></td>
+						  <td class="taskOptions">
+							<a href="商家中心 - 用户管理 - 权限.html"><i class="icon-edit-" title="修改权限"></i></a>
+							<i class="icon-Del" title="删除角色"></i>
+						  </td>
+						</tr>
+					  </tbody>
+					</table>
+		 
+				  </div>
+				</div>
+		  
+		  
+		  </div>
+          <div id="div-suggest-pop"></div>
+		  <table cellspacing="0" cellpadding="0" border="0" id="add-inner" class="boxy-wrapper fixed" style="margin-left:-260px;">
+			<tbody>
+				<tr>
+					<td class="boxy-top-left"></td>
+					<td class="boxy-top"></td>
+					<td class="boxy-top-right"></td>
+				</tr>
+				<tr>
+					<td class="boxy-left"></td>
+					<td class="boxy-inner" style="display: block;">
+					<div class="widget-title"><span class="icon"> <i class="icon-edit"></i> </span><h5>添加分账户</h5><span id="closed-add" class="label label-info">x</span></div>
+					<div class="boxy-content">
+						<label class="control-label">账号名：</label><input type="text" class="span2 m-wrap"><span class="help-inline">the error</span><br/>
+						<label class="control-label">姓名：</label><input type="text" class="span2 m-wrap"><br/>
+						<label class="control-label">密码：</label><input type="text" class="span2 m-wrap"><br/>
+						<label class="control-label">确认密码：</label><input type="text" class="span2 m-wrap"><br/>
+						<label class="control-label">赋予角色：</label>
+						<div class="controls">
+							<select>
+							  <option>店主</option>
+							  <option>店员</option>
+							</select>
+						</div>
+						<br/>
+						<label class="control-label" style="width: 100px;float: left;text-align: right;"></label><button type="submit" class="btn btn-success">添加</button>
+					</div>
+					
+					</td>
+					<td class="boxy-right"></td>
+				</tr>
+				<tr>
+					<td class="boxy-bottom-left"></td>
+					<td class="boxy-bottom"></td>
+					<td class="boxy-bottom-right"></td>
+				</tr>
+			</tbody>
+		  </table>
+          <table cellspacing="0" cellpadding="0" border="0" id="edt-inner" class="boxy-wrapper fixed" style="margin-left:-260px;">
+			<tbody>
+				<tr>
+					<td class="boxy-top-left"></td>
+					<td class="boxy-top"></td>
+					<td class="boxy-top-right"></td>
+				</tr>
+				<tr>
+					<td class="boxy-left"></td>
+					<td class="boxy-inner" style="display: block;">
+					<div class="widget-title"><span class="icon"> <i class="icon-edit"></i> </span><h5>修改密码</h5><span id="closed-edit" class="label label-info">x</span></div>
+					<div class="boxy-content">
+						<label class="control-label">新密码：</label><input type="text" class="span2 m-wrap"><br/>
+						<label class="control-label">确认新密码：</label><input type="text" class="span2 m-wrap"><br/>
+						<label class="control-label" style="width: 100px;float: left;text-align: right;"></label><button type="submit" class="btn btn-success">添加</button>
+					</div>
+					
+					</td>
+					<td class="boxy-right"></td>
+				</tr>
+				<tr>
+					<td class="boxy-bottom-left"></td>
+					<td class="boxy-bottom"></td>
+					<td class="boxy-bottom-right"></td>
+				</tr>
+			</tbody>
+		  </table>
+          
+		</div>
+  </div>
+</div>
+
+<!--end-main-container-part-->   
+
+<!--Footer-part-->
+
+<div class="row-fluid">
+  <div id="footer" class="span12"> 2014 &copy; IMOOLY  Admin. Brought to you by <a href="http://www.imooly.com">imooly.com</a> </div>
+</div>
+
+<!--end-Footer-part-->
+<script type="text/javascript">
+
+$('.icon-plus').live('click', function() { //弹出框
+	$("#add-inner").show();
+	$("#div-suggest-pop").show();
+});
+ $("#closed-add").click(function(){//关闭框
+  $("#add-inner").hide();
+  $("#div-suggest-pop").hide();
+ });
+
+ $('.icon-PWD').live('click', function() { //弹出框
+	$("#edt-inner").show();
+	$("#div-suggest-pop").show();
+});
+ $("#closed-edit").click(function(){//关闭框
+  $("#edt-inner").hide();
+  $("#div-suggest-pop").hide();
+ });
+ $('.icon-start').live('click', function() {
+	$(this).removeClass().addClass("icon-end");
+	$(this).attr("title","点击停用");
+});
+ $('.icon-end').live('click', function() {
+	$(this).removeClass().addClass("icon-start");
+	$(this).attr("title","点击启用");
+});
+</script>
+</body>
+</html>

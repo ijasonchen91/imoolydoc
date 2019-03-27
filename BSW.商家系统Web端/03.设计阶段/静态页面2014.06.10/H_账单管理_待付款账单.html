@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>账单管理_待付款账单</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/matrix-style.css" />
+<link rel="stylesheet" href="css/matrix-media.css" />
+<link rel="stylesheet" href="css/select2.css" />
+</head>
+<body>
+
+<!--Header-part-->
+<div id="header">
+  <h1><a href="dashboard.html">魔力网</a></h1>
+</div>
+<!--close-Header-part--> 
+
+<!--top-Header-menu-->
+<div id="user-storeName">石曼火锅店BalalaBoom...............</div>
+<div id="user-nav" class="navbar navbar-inverse">
+  <ul class="nav">
+	<li class="dropdown" id="profile-messages" ><a title="" href="#" ><i class="user-nav-iHallo"></i> <span class="text">您好！ 石妹纸</span></a></li>
+    <li class=""><a title="" href="#"><i class="user-nav-iPWD"></i> <span class="text">修改密码</span></a></li>
+    <li class=""><a title="" href="login.html"><i class="user-nav-iMsg"></i> <span class="text">我的消息</span></a></li>
+    <li class=""><a title="" href="login.html"><i class="user-nav-iOff"></i> <span class="text">退出系统</span></a></li>
+  </ul>
+</div>
+<!--close-top-Header-menu-->
+
+<!--sidebar-menu-->
+<div id="sidebar">
+  <ul>
+    <li> <a href="订单中心.html" title="订单中心"><i class="icon icon_mune-manageOrders"></i> <span>订单管理</span></a></li>
+	<li><a href="商家中心.html" title="商家中心"><i class="icon icon_mune-manageStore"></i> <span>商家中心</span></a></li>
+    <li class="active"><a href="H_账单管理_账单查询.html" title="商家中心"><i class="icon icon_mune-selectOrders"></i> <span>账单管理</span></a></li>
+    <li><a href="下属商家列表-商家列表.html" title="下属商家管理"><i class="icon icon_mune-insertOrders"></i> <span>下属商家管理</span></a></li>
+	<li><a href="M_商城管理_查看商品.html" title="商城管理"><i class="icon icon_mune-proOrders"></i> <span>商城管理</span></a></li>
+  </ul>
+</div>
+<!--sidebar-menu-->
+
+<!--main-container-part-->
+<div id="content">
+<!--breadcrumbs-->
+  <div id="content-header">
+    <div id="breadcrumb"> <a href="欢迎页面.html" ><i class="icon-home-breadcrumb"></i> 账单管理</a> </div>
+  </div>
+<!--End-breadcrumbs-->
+
+<!--Action boxes-->
+  <div class="container-fluid">
+		<div class="quick-actions_homepage">
+		  <ul class="quick-actions">
+			<li class="bg_lb"> <a href="H_账单管理_账单查询.html"> <i class="icon_big_inbox"></i> <strong> 账单查询</strong> </a> </li>
+			<li class="bg_ly"> <a href="H_账单管理_待付款账单.html"> <i class="icon_big_th"></i> <strong> 待付款账单</strong> </a> </li>
+			<li class="bg_lg span3"> <a href="H_账单管理_下属商家账单查询.html"> <i class="icon_big_signal"></i> <strong>下属商家账单查询</strong></a> </li>
+			<li class="bg_lo"> <a href="H_账单管理_下属商家付款申请.html"> <i class="icon_big_globe"></i> <strong>下属商家付款申请</strong></a> </li>
+			<li class="bg_ly"> <a href="widgets.html"> <i class="icon_big_repeat"></i> <strong>账单付款代理</strong> </a> </li>
+            <li class="bg_lo span3"> <a href="H_账单管理_提现管理.html"> <i class="icon_big_tag"></i> <strong> 提现管理</strong> </a> </li>
+			<li class="bg_ls"> <a href="装修.html"> <i class="icon_big_shopping"></i> <strong> 回扣统计 </strong> </a> </li>
+		  </ul>
+		</div>
+        <!--con-->  
+        <div class="widget-box">
+          <div class="widget-title"> <span class="icon"> <i class="icon-search"></i> </span>
+            <h5>检索字典</h5>
+		  </div>
+          <div class="widget-content">
+			
+			  <div class="btn-group" style="width:100%;">
+				<ul>
+                  <li>
+                    <span>统计数量：0</span>
+                  </li>
+                  <li>
+                    <span>应付款金额：0元</span>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <button type="submit" class="btn btn-success">查询付款金额</button>
+                  </li>
+                  <li>
+                    <button type="submit" class="btn btn-success">付款</button>
+                  </li>
+                </ul>
+			  </div>
+			
+		  </div>  
+		</div>
+        
+        <div class="widget-box"  style="position: relative;">
+          <div class="widget-title"> <span class="icon"> <i class="icon-list"></i> </span>
+            <h5>订单列表</h5>
+		  </div>
+         
+        <div class="dataTables_wrapper">
+            <table class="table table-bordered data-table">
+              <thead>
+                <tr>
+                  <th>开始时间</th>
+				  <th>结束时间</th>
+                  <th>类型</th>
+				  <th>应付款金额</th>
+                </tr>
+              </thead>
+              <tbody>
+               
+                <tr class="gradeA">
+                  <td>Ad010100000000000000000</td>
+                  <td>12345685215</td>
+                  <td>5565.00</td>
+                  <td>2014-05-04 17:00:17</td>
+                </tr>
+				<tr class="gradeA">
+                  <td>Ad010100000456210000000</td>
+                  <td>12345685215</td>
+                  <td>2565.00</td>
+                  <td>2014-05-04 17:00:17</td>
+                </tr>
+				<tr class="gradeA">
+                  <td>Ad010100000123455400500</td>
+                  <td>12345685215</td>
+                  <td>235.00</td>
+                  <td>2014-05-04 17:00:17</td>
+                </tr>
+				<tr class="gradeA">
+                  <td>Ad010100000000000000000</td>
+                  <td>12345685215</td>
+                  <td>25565.00</td>
+                  <td>2014-05-04 17:00:17</td>
+                </tr>
+				<tr class="gradeA">
+                  <td>Ad010100000000000000000</td>
+                  <td>12345685215</td>
+                  <td>232665.00</td>
+                  <td>2014-05-04 17:00:17</td>
+                </tr>
+				<tr class="gradeA">
+                  <td>Ad010100000000000000000</td>
+                  <td>12345685215</td>
+                  <td>2325565.00</td>
+                  <td>2014-05-04 17:00:17</td>
+                </tr>
+				<tr class="gradeA">
+                  <td>Ad010100000000000000000</td>
+                  <td>12345685215</td>
+                  <td>2365.00</td>
+                  <td>2014-05-04 17:00:17</td>
+                </tr>
+				<tr class="gradeA">
+                  <td>Ad010100000000000000000</td>
+                  <td>12345685215</td>
+                  <td>232.00</td>
+                  <td>2014-05-04 17:00:17</td>
+                </tr>
+				<tr class="gradeA">
+                  <td>Ad010100000000000000000</td>
+                  <td>12345685215</td>
+                  <td>23.00</td>
+                  <td>2014-05-04 17:00:17</td>
+                </tr><tr class="gradeA">
+                  <td>Ad010100000000000000000</td>
+                  <td>12345685215</td>
+                  <td>5565.00</td>
+                  <td>2014-05-04 17:00:17</td>
+                </tr>
+				<tr class="gradeA">
+                  <td>Ad010100000000000000000</td>
+                  <td>12345685215</td>
+                  <td>232665565.00</td>
+                  <td>2014-05-04 17:00:17</td>
+                </tr>
+				<tr class="gradeA">
+                  <td>Ad010100000000000000000</td>
+                  <td>12345685215</td>
+                  <td>23266.00</td>
+                  <td>2014-05-04 17:00:17</td>
+                </tr>
+				<tr class="gradeA">
+                  <td>Ad010100000000000000000</td>
+                  <td>12345685215</td>
+                  <td>65.00</td>
+                  <td>2014-05-04 17:00:17</td>
+                </tr><tr class="gradeA">
+                  <td>Ad010100000000000000000</td>
+                  <td>12345685215</td>
+                  <td>565.00</td>
+                  <td>2014-05-04 17:00:17</td>
+                </tr>
+				<tr class="gradeA">
+                  <td>Ad010100000000000000000</td>
+                  <td>12345685215</td>
+                  <td>25565.00</td>
+                  <td>2014-05-04 17:00:17</td>
+                </tr>
+				<tr class="gradeA">
+                  <td>Ad010100000000000000000</td>
+                  <td>12345685215</td>
+                  <td>232665.00</td>
+                  <td>2014-05-04 17:00:17</td>
+                </tr>
+				<tr class="gradeA">
+                  <td>Ad010100000000000000000</td>
+                  <td>12345685215</td>
+                  <td>2325565.00</td>
+                  <td>2014-05-04 17:00:17</td>
+                </tr>
+				
+              </tbody>
+            </table>
+		 
+			<div class="ui-widget-header ui-toolbar">
+				<div class="dataTables_paginate">	
+					<div class="pagination alternate">
+					  <ul>
+						<li class="disabled"><a href="#">首页</a></li>
+						<li class="disabled"><a href="#">上一页</a></li>
+						<li class="active"> <a href="#">1</a> </li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">下一页</a></li>
+						<li><a href="#">最后</a></li>
+					  </ul>
+					</div>
+				</div>	
+			</div>
+  
+		</div>
+		  
+		<table cellspacing="0" cellpadding="0" border="0" id="add-inner" class="boxy-wrapper fixed">
+			<tbody>
+				<tr>
+					<td class="boxy-top-left"></td>
+					<td class="boxy-top"></td>
+					<td class="boxy-top-right"></td>
+				</tr>
+				<tr>
+					<td class="boxy-left"></td>
+					<td class="boxy-inner" style="display: block;">
+					<div class="widget-title"><span class="icon"> <i class="icon-edit"></i> </span><h5>添加订单</h5><span id="closed-add" class="label label-info">x</span></div>
+					<div class="boxy-content">
+						<label class="control-label" style="width: 100px;float: left;text-align: right;">手机号码：</label><div class="controls"><input type="text" class="span2 m-wrap"></div>
+						<label class="control-label" style="width: 100px;float: left;text-align: right;">确认手机号码：</label><div class="controls"><input type="text" class="span2 m-wrap"></div>
+						<label class="control-label" style="width: 100px;float: left;text-align: right;">订单金额：</label><div class="controls"><div class="input-append"><input type="text" class="span2"><span class="add-on">元</span></div></div>
+						<label class="control-label" style="width: 100px;float: left;text-align: right;">魔豆数量：</label><div class="controls"><div class="input-append"><input type="text" class="span2"><span class="add-on">个</span></div><span style="color:#ff7a4d;margin-left:15px;">此账户还有2568289个魔力豆</span></div>
+						<label class="control-label" style="width: 100px;float: left;text-align: right;">备注：</label><div class="controls"><input type="text" class="span4 m-wrap"></div>
+						<label class="control-label" style="width: 100px;float: left;text-align: right;"></label><button type="submit" class="btn btn-success">添加</button>
+					</div>
+					
+					</td>
+					<td class="boxy-right"></td>
+				</tr>
+				<tr>
+					<td class="boxy-bottom-left"></td>
+					<td class="boxy-bottom"></td>
+					<td class="boxy-bottom-right"></td>
+				</tr>
+			</tbody>
+		</table>
+		
+		</div>  
+          
+  </div>
+</div>
+
+<!--end-main-container-part-->
+
+<!--Footer-part-->
+
+<div class="row-fluid">
+  <div id="footer" class="span12"> 2014 &copy; IMOOLY  Admin. Brought to you by <a href="http://www.imooly.com">imooly.com</a> </div>
+</div>
+
+<!--end-Footer-part-->
+<script src="js/jquery.min.js"></script> 
+<script type="text/javascript">
+$(function(){
+ $("#open-add").click(function(){
+  $("#add-inner").show();
+ });
+
+ $("#closed-add").click(function(){
+  $("#add-inner").hide();
+ });
+});
+
+</script>
+
+</body>
+</html>
